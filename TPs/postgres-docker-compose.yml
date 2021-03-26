@@ -1,0 +1,33 @@
+version: '3'
+services:
+  springbatch-postgresql:
+    image: postgres:9.6.5
+    volumes:
+      - springbatch_db:/var/lib/postgresql
+      - springbatch_data:/var/lib/postgresql/data
+    networks:
+      - back
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+    ports:
+      - 5434:5432
+
+  pgadmin4:
+    image: dpage/pgadmin4
+    environment:
+      PGADMIN_DEFAULT_EMAIL: "admin@admin.com"
+      PGADMIN_DEFAULT_PASSWORD: "admin"
+    ports:
+      - "81:80"
+    depends_on:
+      - springbatch-postgresql
+    networks:
+      - back
+volumes:
+  springbatch_data:
+  springbatch_db:
+
+networks:
+  back:
+
