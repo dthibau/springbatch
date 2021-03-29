@@ -1,0 +1,56 @@
+[
+    {
+        "id": 29,
+        "reference": "7O717",
+        "nom": "3O3O6PR4YS98QZR",
+        "description": "29E7713Y7YR5A3YOQR6YEQZZ9RZO59PEAT9ATZ61861QZ66E319QTSQO6OPEZ83YS95Z6Z3115S8QY36ATTSSS8YPQ1S8SQR918O5R3QRQA6T276YRE79T51",
+        "prixUnitaire": 360.66,
+        "availability": 47,
+        "dimension": {
+            "hauteur": 222.0,
+            "longueur": 457.0,
+            "largeur": 476.0
+        },
+        "fournisseur": {
+            "id": 1,
+            "reference": "BELLE",
+            "nom": "Belleville express"
+        }
+    },
+    {
+        "id": 201,
+        "reference": "9S8O1",
+        "nom": "R29RYO7717QRE77",
+        "description": "RASOE2QZ7QO7575O3ZY4PE91ZP11RYRS55ZQ9PA7R49QYZZPOST6Z4P296SZ9T4Y39387136P2YP4SRR44PRRAPS167P7OOE21A9PE2SETP166YZSAPSY535",
+        "prixUnitaire": 345.84,
+        "availability": 16,
+        "dimension": {
+            "hauteur": 164.0,
+            "longueur": 348.0,
+            "largeur": 382.0
+        },
+        "fournisseur": {
+            "id": 2,
+            "reference": "BRICB",
+            "nom": "BricBrac Import/Export"
+        }
+    },
+    {
+        "id": 20,
+        "reference": "SYO1Y",
+        "nom": "99AT4882Y77ETQA",
+        "description": "PYAS5SYE246E6OQPQT3A2T9OS9639QQRET9TSSR552R8TP85AZQO589T838YP9O728ZQT9O5O485TE26TQQZA5T21Z6QOOOOS6PET9O75SP2ST1OE3AR28SR",
+        "prixUnitaire": 40.2,
+        "availability": 20,
+        "dimension": {
+            "hauteur": 47.0,
+            "longueur": 286.0,
+            "largeur": 110.0
+        },
+        "fournisseur": {
+            "id": 1,
+            "reference": "BELLE",
+            "nom": "Belleville express"
+        }
+    }
+]
