@@ -5,7 +5,7 @@
 -- Dumped from database version 9.6.5
 -- Dumped by pg_dump version 12.1
 
--- Started on 2021-03-30 15:58:47 UTC
+-- Started on 2021-04-02 15:02:32 UTC
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -50,50 +50,12 @@ CREATE SEQUENCE public.fournisseur_id_seq
 ALTER TABLE public.fournisseur_id_seq OWNER TO postgres;
 
 --
--- TOC entry 2158 (class 0 OID 0)
+-- TOC entry 2146 (class 0 OID 0)
 -- Dependencies: 185
 -- Name: fournisseur_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
 ALTER SEQUENCE public.fournisseur_id_seq OWNED BY public.fournisseur.id;
-
-
---
--- TOC entry 190 (class 1259 OID 18519)
--- Name: new_produit; Type: TABLE; Schema: public; Owner: postgres
---
-
-CREATE TABLE public.new_produit (
-    id bigint NOT NULL,
-    nom character varying(255),
-    reference character varying(255)
-);
-
-
-ALTER TABLE public.new_produit OWNER TO postgres;
-
---
--- TOC entry 189 (class 1259 OID 18517)
--- Name: new_produit_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
---
-
-CREATE SEQUENCE public.new_produit_id_seq
-    START WITH 1
-    INCREMENT BY 1
-    NO MINVALUE
-    NO MAXVALUE
-    CACHE 1;
-
-
-ALTER TABLE public.new_produit_id_seq OWNER TO postgres;
-
---
--- TOC entry 2159 (class 0 OID 0)
--- Dependencies: 189
--- Name: new_produit_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
---
-
-ALTER SEQUENCE public.new_produit_id_seq OWNED BY public.new_produit.id;
 
 
 --
@@ -133,7 +95,7 @@ CREATE SEQUENCE public.produit_id_seq
 ALTER TABLE public.produit_id_seq OWNER TO postgres;
 
 --
--- TOC entry 2160 (class 0 OID 0)
+-- TOC entry 2147 (class 0 OID 0)
 -- Dependencies: 187
 -- Name: produit_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
@@ -142,7 +104,7 @@ ALTER SEQUENCE public.produit_id_seq OWNED BY public.produit.id;
 
 
 --
--- TOC entry 2020 (class 2604 OID 17748)
+-- TOC entry 2013 (class 2604 OID 17748)
 -- Name: fournisseur id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -150,15 +112,7 @@ ALTER TABLE ONLY public.fournisseur ALTER COLUMN id SET DEFAULT nextval('public.
 
 
 --
--- TOC entry 2022 (class 2604 OID 18522)
--- Name: new_produit id; Type: DEFAULT; Schema: public; Owner: postgres
---
-
-ALTER TABLE ONLY public.new_produit ALTER COLUMN id SET DEFAULT nextval('public.new_produit_id_seq'::regclass);
-
-
---
--- TOC entry 2021 (class 2604 OID 17759)
+-- TOC entry 2014 (class 2604 OID 17759)
 -- Name: produit id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -166,7 +120,7 @@ ALTER TABLE ONLY public.produit ALTER COLUMN id SET DEFAULT nextval('public.prod
 
 
 --
--- TOC entry 2148 (class 0 OID 17745)
+-- TOC entry 2138 (class 0 OID 17745)
 -- Dependencies: 186
 -- Data for Name: fournisseur; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -177,379 +131,7 @@ INSERT INTO public.fournisseur VALUES (3, 'Luxuary unlimited', 'LUXUA');
 
 
 --
--- TOC entry 2152 (class 0 OID 18519)
--- Dependencies: 190
--- Data for Name: new_produit; Type: TABLE DATA; Schema: public; Owner: postgres
---
-
-INSERT INTO public.new_produit VALUES (1, 'QO6O6TES5EP31TO', 'S5TOE');
-INSERT INTO public.new_produit VALUES (2, '59T7A6OO44OQ94O', 'QEQ41');
-INSERT INTO public.new_produit VALUES (3, 'AZ8A5EYO87REAYQ', '53Q4Q');
-INSERT INTO public.new_produit VALUES (4, 'T7QPEYEY37ETEZ3', 'Y473Y');
-INSERT INTO public.new_produit VALUES (5, '8955YA9QATEROP7', '22219');
-INSERT INTO public.new_produit VALUES (6, 'ZTS95S2S14YA631', 'O72S9');
-INSERT INTO public.new_produit VALUES (7, '125Q3QR94TZSA49', '7R5Q8');
-INSERT INTO public.new_produit VALUES (8, 'SOST4379OR961A6', 'T33R8');
-INSERT INTO public.new_produit VALUES (9, 'PAS3PQ3OO73PS6O', '5AE13');
-INSERT INTO public.new_produit VALUES (10, '16EE9P7E8SZ7E3S', '24YPZ');
-INSERT INTO public.new_produit VALUES (11, '5R7PAPEOP7AS48S', 'OQOPR');
-INSERT INTO public.new_produit VALUES (12, 'Z73PSTR1ZE7O13S', 'OZE3E');
-INSERT INTO public.new_produit VALUES (13, '6QA1ZZQ8PZR8Y6S', 'Y79Q2');
-INSERT INTO public.new_produit VALUES (14, 'O4P1Z4OZ3R2556Y', '6S8TT');
-INSERT INTO public.new_produit VALUES (15, '3291ESA192S6116', '91PY7');
-INSERT INTO public.new_produit VALUES (16, 'QEZA1P2OE1E7OZY', 'AOSA8');
-INSERT INTO public.new_produit VALUES (17, '76Y92T6AZQ9Y2E2', '7Q9ZS');
-INSERT INTO public.new_produit VALUES (18, '4SZ64EPZ188E5AZ', '77O57');
-INSERT INTO public.new_produit VALUES (19, '2YY46TA8874PY8O', '21AO8');
-INSERT INTO public.new_produit VALUES (20, '1187PA6Z14A176Z', 'PRRSA');
-INSERT INTO public.new_produit VALUES (21, 'Z81T1YRZ298TOSQ', '6987T');
-INSERT INTO public.new_produit VALUES (22, 'AZO3PP78TO75184', 'QRYTP');
-INSERT INTO public.new_produit VALUES (23, 'PP163RP6YZP2OES', '9A8E5');
-INSERT INTO public.new_produit VALUES (24, '72PYQ568Z5O5Z5Q', 'Z5SRY');
-INSERT INTO public.new_produit VALUES (25, 'QO9P38S8Z2S8195', '1Y6SZ');
-INSERT INTO public.new_produit VALUES (26, '6SRQ5ZO87YESSZ4', '3OA44');
-INSERT INTO public.new_produit VALUES (27, 'OSAO37O1EYEO8YR', 'T1ZS3');
-INSERT INTO public.new_produit VALUES (28, 'OSY9YOP64EE8Z42', '48O88');
-INSERT INTO public.new_produit VALUES (29, 'Z481QA3A6O9E4OA', '6S157');
-INSERT INTO public.new_produit VALUES (30, '7Y749S3ZOSOT8PS', 'R8S13');
-INSERT INTO public.new_produit VALUES (31, '355YEO328TAP5PQ', '69YY3');
-INSERT INTO public.new_produit VALUES (32, 'R7Y8R7A23515EYT', '9STRA');
-INSERT INTO public.new_produit VALUES (33, '1ROZ94A9645YQ2Y', 'QR23R');
-INSERT INTO public.new_produit VALUES (34, '3T1A48P8887EE91', 'T5217');
-INSERT INTO public.new_produit VALUES (35, '7A7YR8YYSSS3TYS', 'R3P37');
-INSERT INTO public.new_produit VALUES (36, '33RR94SEQ92Z1A2', '4Y1R5');
-INSERT INTO public.new_produit VALUES (37, 'YP44RTEYE7Y27RO', 'S24S5');
-INSERT INTO public.new_produit VALUES (38, 'A6OEPRS8PZOE9PY', 'T8129');
-INSERT INTO public.new_produit VALUES (39, '8RE8232Q646ZOQ1', 'AAQ1A');
-INSERT INTO public.new_produit VALUES (40, '5P2R717A6E622Z2', '774RP');
-INSERT INTO public.new_produit VALUES (41, 'ST32TAZ4591R88Q', '72A7Z');
-INSERT INTO public.new_produit VALUES (42, 'E4E199RQ61A83QY', '31158');
-INSERT INTO public.new_produit VALUES (43, 'T7491Q4584Q4EAP', 'T8SRY');
-INSERT INTO public.new_produit VALUES (44, 'E6Q8S8RQ59Z86A6', 'QSZ7E');
-INSERT INTO public.new_produit VALUES (45, 'SAR3R7316P2YT3R', 'AYYE8');
-INSERT INTO public.new_produit VALUES (46, '24OP3A224643AEO', '4E5Z2');
-INSERT INTO public.new_produit VALUES (47, '9532Q6Q8ZT246AO', 'OP75Z');
-INSERT INTO public.new_produit VALUES (48, 'Q5479ZT63154ZOY', '85Z66');
-INSERT INTO public.new_produit VALUES (49, '1QOYOSQZ9SZA1PS', '545O9');
-INSERT INTO public.new_produit VALUES (50, 'AOOR1785OSYQZQ5', '4EE32');
-INSERT INTO public.new_produit VALUES (51, 'Z5ES7RTARSPS2OR', 'S96PP');
-INSERT INTO public.new_produit VALUES (52, 'ZZ35S578TZ74PEE', '8T41E');
-INSERT INTO public.new_produit VALUES (53, '7RYQ96SO819A146', 'ZQ31Y');
-INSERT INTO public.new_produit VALUES (54, '2YQ3P5ARS94TZRA', '9RP4S');
-INSERT INTO public.new_produit VALUES (55, '97AA6RZ518313P2', 'EPYT5');
-INSERT INTO public.new_produit VALUES (56, 'Q2R8TR7PQ8R1RQ8', '6Z4Y7');
-INSERT INTO public.new_produit VALUES (57, 'E9ZO5OTPS9ZZQ71', '88O9E');
-INSERT INTO public.new_produit VALUES (58, '18QY367YTP7YOA4', '23Q9A');
-INSERT INTO public.new_produit VALUES (59, 'YY258484T91A944', '42RE3');
-INSERT INTO public.new_produit VALUES (60, '7YQEA96A42T6R5Y', '2AP7A');
-INSERT INTO public.new_produit VALUES (61, 'EO8P1PS435YA8YO', '24QSS');
-INSERT INTO public.new_produit VALUES (62, '1YO6O5TE4R81QP5', 'Z92A6');
-INSERT INTO public.new_produit VALUES (63, '29EAO7SO8TPZ4Z1', 'SYA66');
-INSERT INTO public.new_produit VALUES (64, 'Q57PZE1S8R7YSSE', 'RO5RE');
-INSERT INTO public.new_produit VALUES (65, '7A2PRR97R5EQ6PE', 'YOQ9Z');
-INSERT INTO public.new_produit VALUES (66, 'Y98TZYTO8PYQ2A6', '11E2E');
-INSERT INTO public.new_produit VALUES (67, 'SAAZZ5SSZR6TZPT', '3OOQ1');
-INSERT INTO public.new_produit VALUES (68, 'TTT33E4Z2POEROP', 'YPTO8');
-INSERT INTO public.new_produit VALUES (69, 'S84PA15RAT968RY', 'PT2R3');
-INSERT INTO public.new_produit VALUES (70, 'SO5EST386PZ7ZQ7', 'R63ZO');
-INSERT INTO public.new_produit VALUES (71, '56YY6572P7YZSRP', '26Y14');
-INSERT INTO public.new_produit VALUES (72, '6Z7ZROR76SZA252', '82P1O');
-INSERT INTO public.new_produit VALUES (73, '54Z754TS32OA8E4', '2APQO');
-INSERT INTO public.new_produit VALUES (74, '7OTTYTRSEZ4OR13', '593YO');
-INSERT INTO public.new_produit VALUES (75, 'OS11Q1Y8ZE74AES', 'AA9Y2');
-INSERT INTO public.new_produit VALUES (76, '315O9TS939EYA2Y', 'POS43');
-INSERT INTO public.new_produit VALUES (77, '69SOQZ726ST91AO', '7RR49');
-INSERT INTO public.new_produit VALUES (78, 'E9SZQQZP3T92OO3', '2O8QR');
-INSERT INTO public.new_produit VALUES (79, 'AE536TEY6YQSR9O', 'E67YY');
-INSERT INTO public.new_produit VALUES (80, '27RY2SZR39SO256', '8Z754');
-INSERT INTO public.new_produit VALUES (81, 'R76ZP2E25Z933TP', '7T4Q1');
-INSERT INTO public.new_produit VALUES (82, 'Z3PRRYP86S5S451', 'O86R6');
-INSERT INTO public.new_produit VALUES (83, 'RTZ237E2RYS9SES', 'PQ898');
-INSERT INTO public.new_produit VALUES (84, 'PZQ747Y2P2T224Z', 'A246P');
-INSERT INTO public.new_produit VALUES (85, '175RTZ41TAP5229', '4Y39Q');
-INSERT INTO public.new_produit VALUES (86, '42R7S75285TZT6Z', '73ZZ7');
-INSERT INTO public.new_produit VALUES (87, '7A5Q117ARP77S34', '5RYYA');
-INSERT INTO public.new_produit VALUES (88, '71Q55ZA476Y4PT9', '2SQZP');
-INSERT INTO public.new_produit VALUES (89, '28553848P324452', '67YT3');
-INSERT INTO public.new_produit VALUES (90, '4ETYZE2T56ZRRSO', '13EYO');
-INSERT INTO public.new_produit VALUES (91, '6AR8RQ2SS837889', '276AZ');
-INSERT INTO public.new_produit VALUES (92, 'REORESZPT9YA13T', '5847Z');
-INSERT INTO public.new_produit VALUES (93, '2OR5SYO49TP7ZT8', '411Q3');
-INSERT INTO public.new_produit VALUES (94, '4ZSQSP71YO154SE', '45YQY');
-INSERT INTO public.new_produit VALUES (95, '2567ERQ929Z7TY4', '6R16P');
-INSERT INTO public.new_produit VALUES (96, 'PT7841POE5Z9OEZ', 'QPS71');
-INSERT INTO public.new_produit VALUES (97, 'T13ATESATO26S4S', 'P26S3');
-INSERT INTO public.new_produit VALUES (98, '4TREP87Z5AAQP8A', '15654');
-INSERT INTO public.new_produit VALUES (99, '1R56SR6P5172Q19', 'AYQZ9');
-INSERT INTO public.new_produit VALUES (100, '76S2YROQ394A68R', '7QTS7');
-INSERT INTO public.new_produit VALUES (101, 'Q6RQ34TOYQYYQ9T', '4TAYR');
-INSERT INTO public.new_produit VALUES (102, '3QEP1S81Z3SY6EQ', 'ZQEEP');
-INSERT INTO public.new_produit VALUES (103, '8SAZ4ZRT6P1368Y', '4EPRS');
-INSERT INTO public.new_produit VALUES (104, '41563SAT3Z1T717', '61YYY');
-INSERT INTO public.new_produit VALUES (105, '69Z743ZTPQOTO94', 'Q772E');
-INSERT INTO public.new_produit VALUES (106, 'Y439TA32YE3R2S9', 'ZY49S');
-INSERT INTO public.new_produit VALUES (107, '22TE8QOS7QE7A8O', '4TZ23');
-INSERT INTO public.new_produit VALUES (108, 'QSE291PEYT7RQ26', 'E65E4');
-INSERT INTO public.new_produit VALUES (109, '7OY83PPR72OZRPO', '9Z4SP');
-INSERT INTO public.new_produit VALUES (110, 'AYQ18TZOYTYQQYE', '48T33');
-INSERT INTO public.new_produit VALUES (111, 'RY7TZQEST426A63', 'TR8AR');
-INSERT INTO public.new_produit VALUES (112, '8369O3ZE5O2E1SZ', '16E7S');
-INSERT INTO public.new_produit VALUES (113, 'Q15Y8OY32EP5E13', 'QA7Q3');
-INSERT INTO public.new_produit VALUES (114, 'QE545T6T7ZO27O6', '272OR');
-INSERT INTO public.new_produit VALUES (115, 'OSTE6ZEPPR22R6T', '6OY6Q');
-INSERT INTO public.new_produit VALUES (116, 'ET895Y413ZPARO7', 'Y64YS');
-INSERT INTO public.new_produit VALUES (117, '6TYSEP47984EOS9', '9PS8O');
-INSERT INTO public.new_produit VALUES (118, '29S5Q7455SQZ431', '5Y5ER');
-INSERT INTO public.new_produit VALUES (119, 'PTS47QZ3QSS46Z4', 'O17E2');
-INSERT INTO public.new_produit VALUES (120, '3SQA3ERR11482R7', 'QTT75');
-INSERT INTO public.new_produit VALUES (121, '8A8Y9PT87E9S1Q6', 'PPYQQ');
-INSERT INTO public.new_produit VALUES (122, 'R755T572TZSR765', '6Y1YZ');
-INSERT INTO public.new_produit VALUES (123, '2ZZ5OR7ZA6PSZO8', 'QZAY5');
-INSERT INTO public.new_produit VALUES (124, 'RZ1P2AASPO993Y6', 'OQR41');
-INSERT INTO public.new_produit VALUES (125, '3AA6AZP6R529OZO', '5P7TY');
-INSERT INTO public.new_produit VALUES (126, '5P73OOYA9RRP7YO', 'QS2Q1');
-INSERT INTO public.new_produit VALUES (127, '986884QQARE1S2P', '4ZA26');
-INSERT INTO public.new_produit VALUES (128, 'QYRTT1579AT2633', 'EP2A3');
-INSERT INTO public.new_produit VALUES (129, 'ZATEZO1O926YT15', '4QSO7');
-INSERT INTO public.new_produit VALUES (130, 'T4OZ59ER79T783S', 'OP723');
-INSERT INTO public.new_produit VALUES (131, 'E345T4AYO8OEER2', 'A9QSY');
-INSERT INTO public.new_produit VALUES (132, '386OO2Z5SA5RAST', '3R69Z');
-INSERT INTO public.new_produit VALUES (133, '3TQOR1P4AASAT17', '2AP6Y');
-INSERT INTO public.new_produit VALUES (134, '7PRR45R657YOTTS', '64ASR');
-INSERT INTO public.new_produit VALUES (135, '6ETORA52EOQRE66', 'S77ZP');
-INSERT INTO public.new_produit VALUES (136, '2PR54R44T7Y3P9T', 'T872S');
-INSERT INTO public.new_produit VALUES (137, 'ZAZ27RPE1P9AZ1A', '3ET14');
-INSERT INTO public.new_produit VALUES (138, '7Z6O22T5SE6ES7Y', 'RR1OS');
-INSERT INTO public.new_produit VALUES (139, 'OREQ52OE32P47E9', 'RQZOQ');
-INSERT INTO public.new_produit VALUES (140, 'T6PSZ2E18R6SSES', 'OSQ67');
-INSERT INTO public.new_produit VALUES (141, 'Y852AT41QT121EP', 'QQ9T2');
-INSERT INTO public.new_produit VALUES (142, '388QA9R28O2P38R', '3OTYT');
-INSERT INTO public.new_produit VALUES (143, '11R299YZ2ASE3EY', 'RS7Y6');
-INSERT INTO public.new_produit VALUES (144, 'P7QAROZQ3533OR4', '31SR6');
-INSERT INTO public.new_produit VALUES (145, 'Q29P26ST8SQ92A5', 'ROSQP');
-INSERT INTO public.new_produit VALUES (146, '7ARYPT21229SR7O', 'R17A9');
-INSERT INTO public.new_produit VALUES (147, '3AYPRP6POYT49E8', '7RTZ4');
-INSERT INTO public.new_produit VALUES (148, '5AQT3P5TTP72981', 'OT6TA');
-INSERT INTO public.new_produit VALUES (149, '55ZOY2PQT7EOROA', 'ZAQZY');
-INSERT INTO public.new_produit VALUES (150, '612E7RA2EEZT7QZ', '7O473');
-INSERT INTO public.new_produit VALUES (151, 'ESRQT4QO11T31QE', 'T6ZOQ');
-INSERT INTO public.new_produit VALUES (152, '652OSP8RRYOOT3O', 'E9Y8T');
-INSERT INTO public.new_produit VALUES (153, '46463ZO11R6YT27', 'ASZOA');
-INSERT INTO public.new_produit VALUES (154, 'TSE3Y92TP15Q8P3', '76S2S');
-INSERT INTO public.new_produit VALUES (155, '89T96E2YS973QZS', 'YS5YT');
-INSERT INTO public.new_produit VALUES (156, '35Y2ZEP851Q5437', '34O7P');
-INSERT INTO public.new_produit VALUES (157, 'SQ7TT44T8658ASS', 'S51PQ');
-INSERT INTO public.new_produit VALUES (158, 'S9Y5O25TQSY1OZP', '416O4');
-INSERT INTO public.new_produit VALUES (159, 'Z8R12QY4OP8ETE9', '7AZ6Z');
-INSERT INTO public.new_produit VALUES (160, '3R5T9Z7S6TTZ9Y2', 'TP9Z8');
-INSERT INTO public.new_produit VALUES (161, '2YQ97AZZY27OZAE', 'Z737Y');
-INSERT INTO public.new_produit VALUES (162, '2OYOE5R1A6TQ48Y', '74TQ9');
-INSERT INTO public.new_produit VALUES (163, 'ORA3QPEQ521Q8O9', '3QOZE');
-INSERT INTO public.new_produit VALUES (164, 'SPR7A3979T8P73E', 'P26OE');
-INSERT INTO public.new_produit VALUES (165, '79133R3Q7TYY3S2', '23Q8A');
-INSERT INTO public.new_produit VALUES (166, 'RR2Y2POQ7Q2A3AR', '74Y8P');
-INSERT INTO public.new_produit VALUES (167, '3EQEP1E9ROQSEY7', '752E2');
-INSERT INTO public.new_produit VALUES (168, 'OEZY9Q6O583EYA5', '51Z83');
-INSERT INTO public.new_produit VALUES (169, '5875A9YTE419TP2', '3Z79Z');
-INSERT INTO public.new_produit VALUES (170, 'AR3OP43R6PP4RS4', '5EZZO');
-INSERT INTO public.new_produit VALUES (171, '4AZE6ZY6Z7Q8186', 'E63OS');
-INSERT INTO public.new_produit VALUES (172, '32E17ZS2Y1OZTAY', 'O7SO4');
-INSERT INTO public.new_produit VALUES (173, 'Y9RQ74PEYP22A9A', 'OE1O3');
-INSERT INTO public.new_produit VALUES (174, '1O65YT6249O1ST9', '1TE3Z');
-INSERT INTO public.new_produit VALUES (175, '4YAA39OYA56RT6A', 'AS6A9');
-INSERT INTO public.new_produit VALUES (176, 'Z4SY2YPSPZO2OYE', '3YSY6');
-INSERT INTO public.new_produit VALUES (177, 'Z9984EA68Z796ZZ', '6QO5A');
-INSERT INTO public.new_produit VALUES (178, '46TR77Z67PS6879', '3ZT6R');
-INSERT INTO public.new_produit VALUES (179, '2EA8PYZ3EOYRPAZ', '63P94');
-INSERT INTO public.new_produit VALUES (180, '47POE971TYQ76ER', 'RYZA9');
-INSERT INTO public.new_produit VALUES (181, '985ERQ1Q4QSA42T', 'S573T');
-INSERT INTO public.new_produit VALUES (182, '41Q7EA98Z475233', 'OEAT7');
-INSERT INTO public.new_produit VALUES (183, 'EAQ7S558R7AY3A9', '1R28T');
-INSERT INTO public.new_produit VALUES (184, '17RE786Y9T134Z5', 'A7RRY');
-INSERT INTO public.new_produit VALUES (185, '493Z2AO3PP4O213', '78Z8Z');
-INSERT INTO public.new_produit VALUES (186, 'TZ238Y8ZTY9O945', '3O2T6');
-INSERT INTO public.new_produit VALUES (187, '468Y5P3ZE9RO825', '3SYES');
-INSERT INTO public.new_produit VALUES (188, 'P4E13S965O1YP93', '45SPP');
-INSERT INTO public.new_produit VALUES (189, 'SREP8Q13O9Z57P9', '3PRYR');
-INSERT INTO public.new_produit VALUES (190, 'Z9E5ZZS4TAPPQPP', '84831');
-INSERT INTO public.new_produit VALUES (191, '9ES5288S9R976R6', '194AT');
-INSERT INTO public.new_produit VALUES (192, '67Y95ZAA27Z8O5T', '351QE');
-INSERT INTO public.new_produit VALUES (193, 'P288YY27OYYA4PZ', '7YA6A');
-INSERT INTO public.new_produit VALUES (194, 'Un produit', 'PROD');
-INSERT INTO public.new_produit VALUES (195, 'P723QZEEZAPQ917', 'T3P23');
-INSERT INTO public.new_produit VALUES (196, 'RR1Y2ET3PEATOSP', '8189O');
-INSERT INTO public.new_produit VALUES (197, '188369253EA2TYY', '1O3YP');
-INSERT INTO public.new_produit VALUES (198, 'Un produit', 'PROD');
-INSERT INTO public.new_produit VALUES (199, '63OAQR8T2521R12', '699PA');
-INSERT INTO public.new_produit VALUES (200, '69O2TZ951S8ZPR7', 'AQ4TO');
-INSERT INTO public.new_produit VALUES (201, '115P17S7868YT8E', 'Y1P7Q');
-INSERT INTO public.new_produit VALUES (202, 'Un produit', 'PROD');
-INSERT INTO public.new_produit VALUES (203, '2E7YE6ORSA533PO', 'Z396Y');
-INSERT INTO public.new_produit VALUES (204, 'PPES4Z73T176182', '99EZS');
-INSERT INTO public.new_produit VALUES (205, 'YR7ZASP47YPAR1E', '1Z747');
-INSERT INTO public.new_produit VALUES (206, 'OOQO93OSO6OR756', 'AOAZ8');
-INSERT INTO public.new_produit VALUES (207, '99P2RASAZ159PE8', '67OPT');
-INSERT INTO public.new_produit VALUES (208, 'ZA81P87R9ZYQYA8', '6E128');
-INSERT INTO public.new_produit VALUES (209, 'YPTR2ESPR6127TS', '3Z738');
-INSERT INTO public.new_produit VALUES (210, '41A9E3PO7S2OYR7', '3OS94');
-INSERT INTO public.new_produit VALUES (211, 'Z7ESEA6ETA3Q8T7', 'OZAY9');
-INSERT INTO public.new_produit VALUES (212, 'T2EOR7SSP1A3ZTZ', '3ZTS3');
-INSERT INTO public.new_produit VALUES (213, '3QT8E1T4ESQ1586', '7A91O');
-INSERT INTO public.new_produit VALUES (214, '5428RA13Z11Q2Q5', 'P6532');
-INSERT INTO public.new_produit VALUES (215, 'Y7AAA4ESS1A3278', 'T2AT9');
-INSERT INTO public.new_produit VALUES (216, 'ORYARAAQ2PS3S64', 'AZ5SS');
-INSERT INTO public.new_produit VALUES (217, 'A117ZR279O6Q696', 'EA91S');
-INSERT INTO public.new_produit VALUES (218, '3677T465E5A5551', '2SP84');
-INSERT INTO public.new_produit VALUES (219, '6ST92EQR1T14Q4P', '3YZ22');
-INSERT INTO public.new_produit VALUES (220, 'Q95S5O416PA112Z', '2Z959');
-INSERT INTO public.new_produit VALUES (221, 'R96AT6Q39REY1T4', 'SQ2Q1');
-INSERT INTO public.new_produit VALUES (222, 'A846ZE55A53P94S', 'T4P3R');
-INSERT INTO public.new_produit VALUES (223, 'ZZRY4T2925TSO5R', 'OZZE3');
-INSERT INTO public.new_produit VALUES (224, 'PYET75RAPQ8OZ9P', 'SYQ94');
-INSERT INTO public.new_produit VALUES (225, 'Un produit', 'PROD');
-INSERT INTO public.new_produit VALUES (226, '5EEE34O1SOES27S', '9PEQ5');
-INSERT INTO public.new_produit VALUES (227, 'Z2478ZAQTQ93ATY', '61555');
-INSERT INTO public.new_produit VALUES (228, 'Un produit', 'PROD');
-INSERT INTO public.new_produit VALUES (229, '2YER65TAP618R4R', '3R451');
-INSERT INTO public.new_produit VALUES (230, 'Un produit', 'PROD');
-INSERT INTO public.new_produit VALUES (231, 'EEE8A81O5OZT8T3', 'S8ROQ');
-INSERT INTO public.new_produit VALUES (232, 'R49S77PRYSA4545', '17ZQ9');
-INSERT INTO public.new_produit VALUES (233, 'Un produit', 'PROD');
-INSERT INTO public.new_produit VALUES (234, '23Q76EO2ZT3S6TT', 'T795O');
-INSERT INTO public.new_produit VALUES (235, '8557ZPAYQE23Y5A', '4T75P');
-INSERT INTO public.new_produit VALUES (236, '8TQPS51943TS3TO', 'PZ4QO');
-INSERT INTO public.new_produit VALUES (237, '9735ROS5O6652OS', 'PS9P8');
-INSERT INTO public.new_produit VALUES (238, '14QPO3P14E2O9P3', '6ZTEY');
-INSERT INTO public.new_produit VALUES (239, '9STPZAS3TY9A73O', '6Y3OR');
-INSERT INTO public.new_produit VALUES (240, 'Un produit', 'PROD');
-INSERT INTO public.new_produit VALUES (241, 'O32E27Z3R1Z5ER7', 'AZEET');
-INSERT INTO public.new_produit VALUES (242, '4P6AE16QTO35SOY', 'YATQ1');
-INSERT INTO public.new_produit VALUES (243, '2E9E3271RT2O4QP', 'O3P75');
-INSERT INTO public.new_produit VALUES (244, '8P156TZ7T3Y511Q', '1QT1Q');
-INSERT INTO public.new_produit VALUES (245, 'EYQ7ARYT97PRSY4', '1Y51R');
-INSERT INTO public.new_produit VALUES (246, '11Z121OZT51R9SE', 'RY3S5');
-INSERT INTO public.new_produit VALUES (247, 'Un produit', 'PROD');
-INSERT INTO public.new_produit VALUES (248, '212TS7TZ21E842Q', '56TPY');
-INSERT INTO public.new_produit VALUES (249, '96TS1ZY27724QTZ', 'PY4PO');
-INSERT INTO public.new_produit VALUES (250, 'P27A1SQ8PZ7EETO', '6E1RT');
-INSERT INTO public.new_produit VALUES (251, '8Z1Z18PYEOZR74A', 'SYRRA');
-INSERT INTO public.new_produit VALUES (252, 'Q315Y84YST952QY', '36AQY');
-INSERT INTO public.new_produit VALUES (253, 'Un produit', 'PROD');
-INSERT INTO public.new_produit VALUES (254, 'T139S7692E91Z2T', 'QA779');
-INSERT INTO public.new_produit VALUES (255, '9T9QA2AT81SPOY5', 'P9394');
-INSERT INTO public.new_produit VALUES (256, '3SEE29QQ8E1O5RZ', 'T7429');
-INSERT INTO public.new_produit VALUES (257, '5AOT3O9A2Z4253Y', 'Z4Y98');
-INSERT INTO public.new_produit VALUES (258, 'QST15A72T3R249Y', '6AYO1');
-INSERT INTO public.new_produit VALUES (259, 'SPS2A98TY3SZ19R', 'RYSRO');
-INSERT INTO public.new_produit VALUES (260, 'T9AY6YPQY2Z5PEO', '5A55A');
-INSERT INTO public.new_produit VALUES (261, 'Un produit', 'PROD');
-INSERT INTO public.new_produit VALUES (262, 'RP43793QE57T46Q', 'Z5S8T');
-INSERT INTO public.new_produit VALUES (263, 'Un produit', 'PROD');
-INSERT INTO public.new_produit VALUES (264, 'T8ZS995PS97A87S', 'YO7ZO');
-INSERT INTO public.new_produit VALUES (265, 'Un produit', 'PROD');
-INSERT INTO public.new_produit VALUES (266, '3ESZ79AEQ222P4S', 'Y78P3');
-INSERT INTO public.new_produit VALUES (267, 'T6Z96S1QT8ORZYA', '7Z3R4');
-INSERT INTO public.new_produit VALUES (268, 'EZP76526PZEPAAR', 'Q5Y3Y');
-INSERT INTO public.new_produit VALUES (269, 'R1Y3857PP2TZ113', 'YYYEA');
-INSERT INTO public.new_produit VALUES (270, 'Un produit', 'PROD');
-INSERT INTO public.new_produit VALUES (271, '4R48YEZ53684T8Z', '776P9');
-INSERT INTO public.new_produit VALUES (272, 'E32S6REPQZ8O65Q', 'R467Z');
-INSERT INTO public.new_produit VALUES (273, '2E216SS3S4P9173', '27435');
-INSERT INTO public.new_produit VALUES (274, '7P7Z2ZYRTYZS9EQ', '1241A');
-INSERT INTO public.new_produit VALUES (275, '517EE453O95S3OR', 'T32AA');
-INSERT INTO public.new_produit VALUES (276, '138TQ9Z8EZO34RS', '556P2');
-INSERT INTO public.new_produit VALUES (277, 'Un produit', 'PROD');
-INSERT INTO public.new_produit VALUES (278, 'YR1P3P9EYST1SAO', 'AZ5A3');
-INSERT INTO public.new_produit VALUES (279, '3QPT9YS2Z19Y2QE', 'P5A71');
-INSERT INTO public.new_produit VALUES (280, '646Q75R62RE116T', '4A42T');
-INSERT INTO public.new_produit VALUES (281, 'Un produit', 'PROD');
-INSERT INTO public.new_produit VALUES (282, 'Un produit', 'PROD');
-INSERT INTO public.new_produit VALUES (283, 'Un produit', 'PROD');
-INSERT INTO public.new_produit VALUES (284, '5QO9QZ6SYS5OY71', 'T4357');
-INSERT INTO public.new_produit VALUES (285, '585ZPP1T74AS95Q', '2R3Y9');
-INSERT INTO public.new_produit VALUES (286, 'OZYTY1Z755Y87PT', 'ASP37');
-INSERT INTO public.new_produit VALUES (287, 'S5P6227Y3S75Q5R', '1S162');
-INSERT INTO public.new_produit VALUES (288, '249Q51P5AA5647Q', 'SAY7R');
-INSERT INTO public.new_produit VALUES (289, '319QY47Y844Y79S', 'QSSO7');
-INSERT INTO public.new_produit VALUES (290, 'OP53O62356EE18A', '7QZT9');
-INSERT INTO public.new_produit VALUES (291, 'PR4O8PYQ626421O', 'ORP9Q');
-INSERT INTO public.new_produit VALUES (292, '9RE3QP5PZ8S77O6', 'OZ2E6');
-INSERT INTO public.new_produit VALUES (293, 'Un produit', 'PROD');
-INSERT INTO public.new_produit VALUES (294, 'OSZRZ7R415R4RQY', '2Q43P');
-INSERT INTO public.new_produit VALUES (295, 'Z7YRP1PR17OR3RP', '523E3');
-INSERT INTO public.new_produit VALUES (296, 'S8ZT24T1QRYY76Y', '91RSY');
-INSERT INTO public.new_produit VALUES (297, '76PAO7RO43Z1Q38', '5A57A');
-INSERT INTO public.new_produit VALUES (298, '5S5T635322O91S3', '77Q15');
-INSERT INTO public.new_produit VALUES (299, '9SE5385AEEO7TS6', '6A7AZ');
-INSERT INTO public.new_produit VALUES (300, '8Z384RZPTTQEQ27', 'QY1A9');
-INSERT INTO public.new_produit VALUES (301, 'PSR6819SPAP3TA4', '879Q7');
-INSERT INTO public.new_produit VALUES (302, '45EZ432PST857R7', 'TRE87');
-INSERT INTO public.new_produit VALUES (303, 'Un produit', 'PROD');
-INSERT INTO public.new_produit VALUES (304, 'Un produit', 'PROD');
-INSERT INTO public.new_produit VALUES (305, 'TTZZO46956PQP9S', 'RTSA1');
-INSERT INTO public.new_produit VALUES (306, 'SARP9ESE8YZ5Q1R', '65SQE');
-INSERT INTO public.new_produit VALUES (307, 'ZET5Y4ZS7AO69T9', 'SPTA8');
-INSERT INTO public.new_produit VALUES (308, 'OQ1ZEA74O2799TZ', 'T9SAT');
-INSERT INTO public.new_produit VALUES (309, '4S2Y4S179914OZ6', 'OTYAR');
-INSERT INTO public.new_produit VALUES (310, '8ZZ893P2O8SE91O', 'OYQ69');
-INSERT INTO public.new_produit VALUES (311, '3E8QS1R642898Z3', '6A5R8');
-INSERT INTO public.new_produit VALUES (312, '1Q81Y77RQ94YSAA', '28T67');
-INSERT INTO public.new_produit VALUES (313, 'Un produit', 'PROD');
-INSERT INTO public.new_produit VALUES (314, 'Un produit', 'PROD');
-INSERT INTO public.new_produit VALUES (315, 'Un produit', 'PROD');
-INSERT INTO public.new_produit VALUES (316, 'S79E9Q34R5537Q2', 'QAATZ');
-INSERT INTO public.new_produit VALUES (317, 'Un produit', 'PROD');
-INSERT INTO public.new_produit VALUES (318, 'Un produit', 'PROD');
-INSERT INTO public.new_produit VALUES (319, '1382A156S6Y558Q', '5A665');
-INSERT INTO public.new_produit VALUES (320, '7QS7QSS9154TOA4', '9Z3O3');
-INSERT INTO public.new_produit VALUES (321, 'Un produit', 'PROD');
-INSERT INTO public.new_produit VALUES (322, 'Un produit', 'PROD');
-INSERT INTO public.new_produit VALUES (323, 'Un produit', 'PROD');
-INSERT INTO public.new_produit VALUES (324, 'SE6366ASEO2O268', 'Y6S4P');
-INSERT INTO public.new_produit VALUES (325, 'Un produit', 'PROD');
-INSERT INTO public.new_produit VALUES (326, 'Un produit', 'PROD');
-INSERT INTO public.new_produit VALUES (327, 'Un produit', 'PROD');
-INSERT INTO public.new_produit VALUES (328, 'PA3349APTZ4AQ32', 'T758A');
-INSERT INTO public.new_produit VALUES (329, 'Un produit', 'PROD');
-INSERT INTO public.new_produit VALUES (330, '3QOR19A4OYEZ751', '42ZOT');
-INSERT INTO public.new_produit VALUES (331, 'Un produit', 'PROD');
-INSERT INTO public.new_produit VALUES (332, 'Un produit', 'PROD');
-INSERT INTO public.new_produit VALUES (333, 'A4E36R75Y19ZZT5', '12Y95');
-INSERT INTO public.new_produit VALUES (334, 'Un produit', 'PROD');
-INSERT INTO public.new_produit VALUES (335, 'Un produit', 'PROD');
-INSERT INTO public.new_produit VALUES (336, 'Un produit', 'PROD');
-INSERT INTO public.new_produit VALUES (337, 'Un produit', 'PROD');
-INSERT INTO public.new_produit VALUES (338, 'Un produit', 'PROD');
-INSERT INTO public.new_produit VALUES (339, 'Un produit', 'PROD');
-INSERT INTO public.new_produit VALUES (340, 'Un produit', 'PROD');
-INSERT INTO public.new_produit VALUES (341, 'Un produit', 'PROD');
-INSERT INTO public.new_produit VALUES (342, 'Un produit', 'PROD');
-INSERT INTO public.new_produit VALUES (343, 'Un produit', 'PROD');
-INSERT INTO public.new_produit VALUES (344, '64PPQ8Z6TY2T76O', '58S65');
-INSERT INTO public.new_produit VALUES (345, 'Un produit', 'PROD');
-INSERT INTO public.new_produit VALUES (346, 'Un produit', 'PROD');
-INSERT INTO public.new_produit VALUES (347, 'Q4AYZS1P1EZ7YZR', 'SQSTO');
-INSERT INTO public.new_produit VALUES (348, 'Un produit', 'PROD');
-INSERT INTO public.new_produit VALUES (349, 'Un produit', 'PROD');
-INSERT INTO public.new_produit VALUES (350, 'Un produit', 'PROD');
-INSERT INTO public.new_produit VALUES (351, 'Un produit', 'PROD');
-INSERT INTO public.new_produit VALUES (352, 'Un produit', 'PROD');
-INSERT INTO public.new_produit VALUES (353, 'Un produit', 'PROD');
-INSERT INTO public.new_produit VALUES (354, 'Un produit', 'PROD');
-INSERT INTO public.new_produit VALUES (355, 'Un produit', 'PROD');
-INSERT INTO public.new_produit VALUES (356, '6E8ZO4T68EZ22Y4', 'P9P2Q');
-INSERT INTO public.new_produit VALUES (357, 'Un produit', 'PROD');
-INSERT INTO public.new_produit VALUES (358, 'Un produit', 'PROD');
-INSERT INTO public.new_produit VALUES (359, 'Un produit', 'PROD');
-INSERT INTO public.new_produit VALUES (360, '644A52462QA39A4', 'A9E1Q');
-INSERT INTO public.new_produit VALUES (361, 'Un produit', 'PROD');
-INSERT INTO public.new_produit VALUES (362, 'Un produit', 'PROD');
-INSERT INTO public.new_produit VALUES (363, 'Un produit', 'PROD');
-INSERT INTO public.new_produit VALUES (364, 'Un produit', 'PROD');
-
-
---
--- TOC entry 2150 (class 0 OID 17756)
+-- TOC entry 2140 (class 0 OID 17756)
 -- Dependencies: 188
 -- Data for Name: produit; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -1713,7 +1295,7 @@ INSERT INTO public.produit VALUES (1158, 77, 'Une belle description', 100, 100, 
 
 
 --
--- TOC entry 2161 (class 0 OID 0)
+-- TOC entry 2148 (class 0 OID 0)
 -- Dependencies: 185
 -- Name: fournisseur_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
@@ -1722,16 +1304,7 @@ SELECT pg_catalog.setval('public.fournisseur_id_seq', 3, true);
 
 
 --
--- TOC entry 2162 (class 0 OID 0)
--- Dependencies: 189
--- Name: new_produit_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
---
-
-SELECT pg_catalog.setval('public.new_produit_id_seq', 364, true);
-
-
---
--- TOC entry 2163 (class 0 OID 0)
+-- TOC entry 2149 (class 0 OID 0)
 -- Dependencies: 187
 -- Name: produit_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
@@ -1740,7 +1313,7 @@ SELECT pg_catalog.setval('public.produit_id_seq', 1158, true);
 
 
 --
--- TOC entry 2024 (class 2606 OID 17753)
+-- TOC entry 2016 (class 2606 OID 17753)
 -- Name: fournisseur fournisseur_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -1749,16 +1322,7 @@ ALTER TABLE ONLY public.fournisseur
 
 
 --
--- TOC entry 2028 (class 2606 OID 18527)
--- Name: new_produit new_produit_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
---
-
-ALTER TABLE ONLY public.new_produit
-    ADD CONSTRAINT new_produit_pkey PRIMARY KEY (id);
-
-
---
--- TOC entry 2026 (class 2606 OID 17764)
+-- TOC entry 2018 (class 2606 OID 17764)
 -- Name: produit produit_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -1767,7 +1331,7 @@ ALTER TABLE ONLY public.produit
 
 
 --
--- TOC entry 2029 (class 2606 OID 17765)
+-- TOC entry 2019 (class 2606 OID 17765)
 -- Name: produit fkayuabstor0gbpqp7stdcqwnte; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -1775,7 +1339,7 @@ ALTER TABLE ONLY public.produit
     ADD CONSTRAINT fkayuabstor0gbpqp7stdcqwnte FOREIGN KEY (fournisseur_id) REFERENCES public.fournisseur(id);
 
 
--- Completed on 2021-03-30 15:58:47 UTC
+-- Completed on 2021-04-02 15:02:32 UTC
 
 --
 -- PostgreSQL database dump complete

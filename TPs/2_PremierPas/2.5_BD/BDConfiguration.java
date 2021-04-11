@@ -42,18 +42,6 @@ public class BDConfiguration {
         return dataSource;
     }
 
-    @Bean
-    public DataSource outputProductDataSource() {
  
-        DriverManagerDataSource dataSource
-          = new DriverManagerDataSource();
-//        dataSource.setDriverClassName(
-//          env.getProperty("jdbc.driverClassName"));
-        dataSource.setUrl(env.getProperty("appli.output.jdbc.url"));
-        dataSource.setUsername(env.getProperty("spring.datasource.username"));
-        dataSource.setPassword(env.getProperty("spring.datasource.password"));
-
-        return dataSource;
-    }
 
 }

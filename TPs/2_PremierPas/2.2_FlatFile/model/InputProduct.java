@@ -1,35 +1,27 @@
 package org.formation.model;
 
-import java.time.Instant;
-
 import javax.validation.constraints.NotEmpty;
-import javax.validation.constraints.NotNull;
 
 import org.hibernate.validator.constraints.Length;
 
-public class OutputProduct {
+public class InputProduct {
 
-	public OutputProduct() {
-		// TODO Auto-generated constructor stub
-	}
-	public OutputProduct(InputProduct inputProduct) {
-		this.hauteur = inputProduct.getHauteur();
-		this.largeur = inputProduct.getLargeur();
-		this.longueur = inputProduct.getLongueur();
-		this.reference = inputProduct.getReference();
-		this.nom = inputProduct.getNom();
-				
-		instant = Instant.now();
-	}
 	@NotEmpty
 	@Length(min = 5, max = 5)
 	private String reference;
 	@NotEmpty
 	private String nom;
 	
+	
+	
 	private Float hauteur, largeur, longueur;
-	@NotNull
-	private Instant instant;
+
+	private long id;
+	private int availability;
+	private String description;
+	private  double prixUnitaire;
+	private int fournisseurId; 
+	
 	public String getReference() {
 		return reference;
 	}
@@ -60,12 +52,37 @@ public class OutputProduct {
 	public void setLongueur(Float longueur) {
 		this.longueur = longueur;
 	}
-	public Instant getInstant() {
-		return instant;
+	public long getId() {
+		return id;
 	}
-	public void setInstant(Instant instant) {
-		this.instant = instant;
+	public void setId(long id) {
+		this.id = id;
 	}
+	public int getAvailability() {
+		return availability;
+	}
+	public void setAvailability(int availability) {
+		this.availability = availability;
+	}
+	public String getDescription() {
+		return description;
+	}
+	public void setDescription(String description) {
+		this.description = description;
+	}
+	public double getPrixUnitaire() {
+		return prixUnitaire;
+	}
+	public void setPrixUnitaire(double prixUnitaire) {
+		this.prixUnitaire = prixUnitaire;
+	}
+	public int getFournisseurId() {
+		return fournisseurId;
+	}
+	public void setFournisseurId(int fournisseurId) {
+		this.fournisseurId = fournisseurId;
+	}
+
 	
 	
 	
