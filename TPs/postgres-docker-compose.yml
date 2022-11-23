@@ -1,7 +1,7 @@
 version: '3'
 services:
   springbatch-postgresql:
-    image: postgres:9.6.5
+    image: postgres:15.1
     volumes:
       - springbatch_db:/var/lib/postgresql
       - springbatch_data:/var/lib/postgresql/data
