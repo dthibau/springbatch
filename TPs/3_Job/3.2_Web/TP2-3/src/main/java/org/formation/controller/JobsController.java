@@ -20,16 +20,7 @@ public class JobsController {
 	public String getAllJobs(Model model) {
 		List<JobDto> list = new ArrayList<>();
 
-		for ( String name : jobExplorer.getJobNames() ) {
-			JobDto dto = new JobDto();
-			dto.setName(name);
-			JobInstance lastJobInstance = jobExplorer.getLastJobInstance(name);
-			dto.setLastJobInstance(lastJobInstance);
-			dto.setLastExecution(jobExplorer.getLastJobExecution(lastJobInstance));
-			list.add(dto);
-		}
 
-		model.addAttribute("jobs",list);
 		
 		return "jobs";
 	}
