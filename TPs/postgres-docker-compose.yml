@@ -1,6 +1,6 @@
-version: '3'
 services:
   springbatch-postgresql:
+    container_name: springbatch-postgresql
     image: postgres:15.1
     volumes:
       - springbatch_db:/var/lib/postgresql
@@ -13,7 +13,8 @@ services:
     ports:
       - 5434:5432
 
-  pgadmin4:
+  springbatch-pgadmin4:
+    container_name: springbatch-pgadmin4
     image: dpage/pgadmin4
     environment:
       PGADMIN_DEFAULT_EMAIL: "admin@admin.com"
@@ -30,4 +31,5 @@ volumes:
 
 networks:
   back:
+    name: springbatch_network
 

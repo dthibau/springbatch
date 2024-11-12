@@ -15,7 +15,12 @@ public class JobConfiguration {
 	DummyReader dummyReader;
 	@Autowired 
 	DummyWriter dummyWriter;
-	
 
+	@Autowired
+	JobRepository jobRepository;
+
+	@Autowired
+	PlatformTransactionManager transactionManager;
+	
 	// A compléter
 }
