@@ -10,7 +10,6 @@ import javax.xml.bind.annotation.XmlTransient;
 
 import org.hibernate.validator.constraints.Length;
 
-@XmlRootElement(name = "produit")
 public class OutputProduct {
 
 	public OutputProduct() {
@@ -77,7 +76,6 @@ public class OutputProduct {
 		this.longueur = longueur;
 	}
 
-	@XmlTransient
 	public Instant getInstant() {
 		return instant;
 	}
@@ -86,7 +84,6 @@ public class OutputProduct {
 		this.instant = instant;
 	}
 
-	@XmlElement(name = "importedDate")
 	public String getImportedDate() {
 		return instant.toString();
 	}
