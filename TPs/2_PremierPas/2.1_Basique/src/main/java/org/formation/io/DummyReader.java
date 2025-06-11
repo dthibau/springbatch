@@ -1,5 +1,6 @@
-package org.formation.dummy;
+package org.formation.io;
 
+import org.formation.model.DummyRecord;
 import org.springframework.batch.core.configuration.annotation.JobScope;
 import org.springframework.batch.item.ItemReader;
 import org.springframework.batch.item.NonTransientResourceException;
@@ -14,10 +15,7 @@ public class DummyReader implements ItemReader<DummyRecord> {
 	private int i =0;
 	private int nbIterations=100;
 	
-//	public DummyReader(@Value("#{jobParameters[input]}") String nbIterations) {
-//		this.nbIterations = Integer.parseInt(nbIterations);
-//	}
-	
+
 	@Override
 	public DummyRecord read() throws Exception, UnexpectedInputException, ParseException, NonTransientResourceException {
 		if ( i < nbIterations ) {

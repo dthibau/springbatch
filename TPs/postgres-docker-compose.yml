@@ -11,7 +11,7 @@ services:
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=postgres
     ports:
-      - 5433:5432
+      - 5434:5432
 
   springbatch-pgadmin4:
     container_name: springbatch-pgadmin4

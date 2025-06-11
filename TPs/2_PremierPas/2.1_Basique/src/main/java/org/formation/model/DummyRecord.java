@@ -1,4 +1,4 @@
-package org.formation.dummy;
+package org.formation.model;
 
 import java.time.LocalDateTime;
 

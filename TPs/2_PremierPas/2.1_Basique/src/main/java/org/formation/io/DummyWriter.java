@@ -1,7 +1,6 @@
-package org.formation.dummy;
+package org.formation.io;
 
-import java.util.List;
-
+import org.formation.model.DummyRecord;
 import org.springframework.batch.item.Chunk;
 import org.springframework.batch.item.ItemWriter;
 import org.springframework.stereotype.Component;
@@ -16,4 +15,3 @@ public class DummyWriter implements ItemWriter<DummyRecord> {
 
 	}
 }
-
