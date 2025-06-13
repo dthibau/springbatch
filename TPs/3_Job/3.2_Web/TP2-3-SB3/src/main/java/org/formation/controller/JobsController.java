@@ -21,7 +21,7 @@ public class JobsController {
 		List<JobDto> list = new ArrayList<>();
 
 
-		
+		model.addAttribute("jobs", list);
 		return "jobs";
 	}
 }
